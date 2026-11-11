@@ -1,0 +1,102 @@
+/* Gemensam stil för Dhex Lock-sidorna. Samma färger och typsnitt som dhexab.com. */
+:root {
+  --bg: #E3EAE4;
+  --card: #FFFFFF;
+  --dark: #12352B;
+  --dark-2: #1C4A3C;
+  --text: #12352B;
+  --soft: #4D6B61;
+  --on-dark: #EEF2EE;
+  --on-dark-soft: #C9D8CF;
+  --accent: #1F6B4C;
+  --pill: #8BD3A8;
+  --line: #CFDBD2;
+  --code-bg: #F1F5F2;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Manrope, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+a { color: var(--accent); }
+a:hover { color: var(--dark); }
+
+.top { background: var(--dark); color: var(--on-dark); border-radius: 0 0 40px 40px; }
+.top-inner { max-width: 960px; margin: 0 auto; padding: 20px 24px 56px; }
+.bar { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; justify-content: space-between; }
+.brand { display: inline-flex; align-items: center; min-height: 44px; color: #FFFFFF; }
+.brand svg { display: block; }
+.tabs {
+  display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+  font-size: 15px; font-weight: 600;
+  background: rgba(255, 255, 255, 0.08); padding: 6px; border-radius: 999px;
+}
+.tabs a { text-decoration: none; color: var(--on-dark); padding: 9px 16px; border-radius: 999px; }
+.tabs a:hover { background: rgba(255, 255, 255, 0.10); color: #FFFFFF; }
+.tabs a[aria-current="page"] { background: var(--on-dark); color: var(--dark); }
+
+.hero { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; margin-top: 48px; }
+.hero img { width: 96px; height: 96px; border-radius: 24px; background: #FFFFFF; flex: none; }
+.hero h1 { margin: 0; font-weight: 800; font-size: clamp(36px, 6vw, 60px); line-height: 1; letter-spacing: -0.035em; }
+.hero p { margin: 8px 0 0; font-size: 19px; color: var(--on-dark-soft); max-width: 560px; }
+.pill {
+  display: inline-block; font-size: 14px; font-weight: 700; padding: 6px 14px;
+  border-radius: 999px; background: var(--pill); color: var(--dark);
+}
+
+main { max-width: 960px; margin: 0 auto; padding: 32px 16px 24px; }
+nav.lang { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; padding: 0 8px; }
+nav.lang a {
+  padding: 6px 14px; border-radius: 999px; background: var(--card); color: var(--text);
+  text-decoration: none; font-weight: 700; border: 2px solid var(--line);
+}
+nav.lang a:hover { border-color: var(--accent); }
+
+section.card {
+  background: var(--card); border-radius: 24px; padding: 12px 32px 32px; margin-bottom: 16px;
+}
+@media (max-width: 600px) { section.card { padding: 8px 20px 24px; } }
+h2 { margin: 1.6em 0 0.4em; font-size: 1.35rem; letter-spacing: -0.01em; }
+h2.title { margin-top: 0.9em; font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; }
+h3 { margin: 1.4em 0 0.3em; font-size: 1.1rem; }
+.updated { color: var(--soft); font-style: italic; margin-top: -0.4em; }
+.who { background: var(--bg); border-radius: 14px; padding: 12px 18px; }
+.note { background: #FFF6DA; border-radius: 14px; padding: 12px 18px; }
+ul, ol { padding-left: 1.3em; }
+li { margin: 0.2em 0; }
+
+code, pre { font-family: ui-monospace, "Cascadia Mono", Consolas, monospace; font-size: 0.88em; }
+code { background: var(--code-bg); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+pre { background: var(--dark); color: var(--on-dark); padding: 14px 18px; border-radius: 14px; overflow-x: auto; line-height: 1.5; }
+pre code { background: none; padding: 0; color: inherit; overflow-wrap: normal; }
+
+.table-wrap { overflow-x: auto; margin: 0.6em 0 1em; }
+table { border-collapse: collapse; width: 100%; font-size: 0.95em; }
+th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+th { font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.05em; color: var(--soft); }
+td code { white-space: nowrap; }
+/* På smala skärmar blir varje tabellrad ett eget kort i stället för att skrollas i sidled. */
+@media (max-width: 600px) {
+  table, tbody, tr, td { display: block; }
+  thead { display: none; }
+  tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  td { border: 0; padding: 1px 0; }
+  td:empty { display: none; }
+  td:first-child { font-size: 0.8em; font-weight: 700; color: var(--soft); }
+}
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin: 1em 0; }
+.tile { background: var(--bg); border-radius: 18px; padding: 18px 20px; }
+.tile h3 { margin: 0 0 4px; }
+.tile p { margin: 0; color: var(--soft); font-size: 0.95em; }
+
+footer {
+  max-width: 960px; margin: 0 auto; padding: 16px 24px 32px;
+  display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: space-between;
+  font-size: 14px; color: var(--soft);
+}
