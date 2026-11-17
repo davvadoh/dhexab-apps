@@ -18,6 +18,7 @@
         <a href="./" aria-current="page">Dhex Lock</a>
         <a href="api/">API</a>
         <a href="privacy/">Privacy</a>
+        <a href="terms/">Terms</a>
       </nav>
     </div>
     <div class="hero">
@@ -50,7 +51,7 @@
     <ul>
       <li>Android 9 or later.</li>
       <li>A device you can dedicate to kiosk use.</li>
-      <li>To lock the device, Dhex Lock must be its <strong>Device Owner</strong>. Android only allows that on a device with no accounts on it. Without Device Owner the app shows a clear notice and only lets you preview the content.</li>
+      <li>To lock the device, Dhex Lock must be its <strong>Device Owner</strong>. Android only allows that on a device with no accounts on it. Without Device Owner, kiosk mode still works with a limited lock: the app is pinned to the screen and becomes the home app, so Home and restarts lead back to the kiosk. It can however be left with the system's gesture, the screen can only be blackened (not turned off) and restart via the API does not work. The app shows a warning for ten seconds each time the kiosk starts.</li>
     </ul>
 
     <h2>Option 1: With a computer (ADB)</h2>
@@ -106,7 +107,7 @@
     <ul>
       <li>Android 9 eller senare.</li>
       <li>En enhet som får användas enbart som kiosk.</li>
-      <li>För att låsa enheten måste Dhex Lock vara dess <strong>Device Owner</strong>. Android tillåter det bara på en enhet utan konton. Utan Device Owner visar appen en tydlig varning och låter dig bara förhandsvisa innehållet.</li>
+      <li>För att låsa enheten måste Dhex Lock vara dess <strong>Device Owner</strong>. Android tillåter det bara på en enhet utan konton. Utan Device Owner fungerar kioskläget ändå med begränsad låsning: appen fästs på skärmen och blir startskärm, så att hemknappen och omstarter leder tillbaka till kiosken. Den går dock att lämna med systemets gest, skärmen kan bara svärtas (inte släckas) och omstart via API:et fungerar inte. Appen visar en varning i tio sekunder varje gång kiosken startar.</li>
     </ul>
 
     <h2>Alternativ 1: Med en dator (ADB)</h2>
