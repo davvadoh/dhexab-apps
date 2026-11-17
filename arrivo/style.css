@@ -80,3 +80,13 @@ section{padding:64px 0}
 .footer{font-size:14px;color:#4D6B61}
 @media(max-width:850px){.hero{grid-template-columns:1fr;gap:32px;padding:64px 0}.brandpanel{min-height:250px}.features{grid-template-columns:repeat(2,minmax(0,1fr))}.split{grid-template-columns:1fr}.nav{min-height:auto}}
 @media(max-width:530px){.container{max-width:1248px;padding:0 24px}.top{border-radius:0 0 28px 28px}.nav{padding:20px 0;gap:12px}.navlinks{justify-content:flex-start}.navlinks a{font-size:13px;padding:8px 10px}.hero{padding:54px 0}.hero h1{font-size:clamp(44px,11vw,64px)}.lead{font-size:18px}.features,.reasons{grid-template-columns:1fr}.feature,.reason{padding:30px}.dark{margin:0 16px;padding:0}.dark .container{padding:0 20px}.sectiontop h2{font-size:38px}.cta{padding:36px 28px}.trust{display:grid;grid-template-columns:1fr 1fr}.brandpanel{min-height:210px}.btn{font-size:15px;padding:14px 20px}}
+
+/* Exakt samma headerstruktur som startsidan, utan dubbla container-marginaler. */
+.top > .container {max-width:none;padding:0;margin:0;width:100%;}
+.top > .container > header {max-width:1200px;box-sizing:content-box;margin:0 auto;padding:20px 24px;display:flex;flex-wrap:wrap;gap:12px 32px;align-items:center;justify-content:space-between;min-height:0;}
+.top > .container > header > a {flex:none;}
+.top > .container > main {max-width:1248px;box-sizing:border-box;margin:0 auto;padding:0 24px;}
+/* Main och funktioner följer startsidans skala. */
+body {font-size:17px;line-height:1.6;}
+.feature p,.reason p {font-size:17px;}
+@media(max-width:530px){.top > .container > header{padding:20px 24px;}.top > .container > main{padding:0 24px;}}
