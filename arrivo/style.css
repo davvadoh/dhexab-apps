@@ -26,3 +26,57 @@
 .step{background:#245344}
 .cta{background:#1F6B4C;border-radius:32px}
 @media(max-width:530px){.container{padding:0 19px}.top{border-radius:0 0 28px 28px}.navlinks a{font-size:12px;padding:7px 9px}.brandpanel{min-height:220px}}
+
+/* ===== DHEX AB 1:1 layout measurements – shared across pages ===== */
+:root{--forest:#12352B;--forest2:#1C4A3C;--mint:#8BD3A8;--cream:#E3EAE4;--ink:#12352B;--sub:#C9D8CF;--white:#EEF2EE}
+html{scroll-behavior:smooth}
+body{font-family:Manrope,system-ui,sans-serif;font-size:17px;line-height:1.6;background:#E3EAE4;color:#12352B;-webkit-font-smoothing:auto}
+/* Homepage measures max-width 1200 content + 24px on both sides because it uses content-box sizing */
+.container{max-width:1248px;padding:0 24px;margin:0 auto}
+.top{background:#12352B;color:#EEF2EE;border-radius:0 0 40px 40px;overflow:visible}
+.nav{min-height:88px;padding:20px 0;display:flex;align-items:center;justify-content:space-between;gap:12px 32px;flex-wrap:wrap}
+.dhex-brand{display:inline-flex;min-height:44px;align-items:center;flex:none;color:#fff;text-decoration:none}
+.dhex-brand svg{width:106px;height:48px;display:block}
+.navlinks{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:15px;font-weight:600;background:rgba(255,255,255,.08);padding:6px;border-radius:999px}
+.navlinks a{font-size:15px;font-weight:600;padding:10px 16px;line-height:1.6;color:#EEF2EE;border-radius:999px;text-decoration:none}
+.navlinks a:hover{background:rgba(255,255,255,.12);color:#fff}
+.navlinks a.active,.navlinks a.active:hover{background:#EEF2EE;color:#12352B}
+/* Follow homepage: left-aligned, prominent headline, roomy spacing, no centered narrow column */
+.hero{padding:96px 0 72px;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr);gap:48px;align-items:center}
+.hero h1{font-size:clamp(44px,7.4vw,104px);line-height:.98;letter-spacing:-.045em;font-weight:800;max-width:13ch;margin:30px 0 22px}
+.eyebrow{font-size:14px;font-weight:700;padding:6px 14px;background:#8BD3A8;color:#12352B}
+.hero h1 em{color:#8BD3A8}
+.lead{font-size:20px;line-height:1.55;color:#C9D8CF;max-width:540px;margin:0}
+.actions{margin-top:32px;gap:12px}
+.btn{font-size:17px;line-height:1.6;font-weight:700;padding:16px 28px}
+.btn.main{background:#EEF2EE;color:#12352B;border-color:transparent}
+.btn.ghost{border:1px solid #4D7A6B;color:#EEF2EE}
+.brandpanel{min-height:350px;background:#1C4A3C;border-radius:24px;display:grid;place-items:center;padding:30px}
+.brandpanel img{max-width:100%;height:auto}
+.trust{margin-top:0;padding:28px 0 34px;border-top:1px solid #2C5446;color:#A9C2B5;font-size:15px;gap:24px}
+.trust strong{font-size:18px;color:#EEF2EE}
+/* Home main uses 64px top gap, 24px edges, 48px cards */
+section{padding:64px 0}
+.sectiontop{max-width:none;margin-bottom:30px;text-align:left}
+.sectiontop h2{font-size:clamp(36px,5vw,64px);font-weight:800;line-height:1.05;letter-spacing:-.035em;margin:14px 0 18px;max-width:21ch}
+.sectiontop p,.copy{font-size:20px;line-height:1.55;max-width:760px}
+.kicker{font-size:14px;letter-spacing:.08em;color:#4D6B61}
+.features{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.feature,.reason{padding:36px;border-radius:24px;min-height:238px;text-align:left}
+.feature h3,.reason h3{font-size:24px;font-weight:800;letter-spacing:-.02em}
+.feature p,.reason p{font-size:17px;line-height:1.6}
+.dark{margin:0 auto;max-width:1200px;box-sizing:border-box;border-radius:24px;background:#12352B;color:#EEF2EE;padding:0 24px}
+.dark .container{padding-left:24px;padding-right:24px}
+.diagram{background:#1C4A3C;border-radius:18px}
+.step{padding:22px 24px;font-size:17px;background:#245344}
+.reasons{gap:16px}
+.faq{max-width:none;gap:12px}
+.faq details{padding:26px 30px;border-radius:18px}
+.faq summary{font-size:19px}
+.faq p{font-size:17px}
+.cta{border-radius:32px;padding:64px 48px;background:#1F6B4C}
+.cta h2{font-size:clamp(32px,4.4vw,52px);letter-spacing:-.03em;line-height:1.08;max-width:16ch}
+.cta p{font-size:18px}
+.footer{font-size:14px;color:#4D6B61}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:32px;padding:64px 0}.brandpanel{min-height:250px}.features{grid-template-columns:repeat(2,minmax(0,1fr))}.split{grid-template-columns:1fr}.nav{min-height:auto}}
+@media(max-width:530px){.container{max-width:1248px;padding:0 24px}.top{border-radius:0 0 28px 28px}.nav{padding:20px 0;gap:12px}.navlinks{justify-content:flex-start}.navlinks a{font-size:13px;padding:8px 10px}.hero{padding:54px 0}.hero h1{font-size:clamp(44px,11vw,64px)}.lead{font-size:18px}.features,.reasons{grid-template-columns:1fr}.feature,.reason{padding:30px}.dark{margin:0 16px;padding:0}.dark .container{padding:0 20px}.sectiontop h2{font-size:38px}.cta{padding:36px 28px}.trust{display:grid;grid-template-columns:1fr 1fr}.brandpanel{min-height:210px}.btn{font-size:15px;padding:14px 20px}}
