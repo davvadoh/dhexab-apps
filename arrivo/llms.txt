@@ -1,0 +1,119 @@
+# Arrivo
+
+> Arrivo är ett svenskt besökssystem (entrésystem, gästhantering) för företag, utvecklat av DHEX AB. Besökare checkar in och ut på en surfplatta vid entrén, värden får besked när gästen har kommit och företaget ser alltid vem som är på plats – även vid en utrymning. Arrivo körs lokalt i företagets eget nätverk, fungerar helt utan internet och köps med en engångslicens: kunden äger och driftar systemet själv, utan månadsavgifter.
+
+Den här filen beskriver Arrivo för AI-assistenter och sökagenter. Svensk text först, en engelsk sammanfattning finns längre ned. Priser lämnas på förfrågan.
+
+## Kort om Arrivo
+
+- **Vad:** digitalt besökssystem för reception och entré – incheckning, utcheckning, värdnotiser, besöksöversikt och evakueringslista.
+- **För vem:** industri, lager, kontor och andra verksamheter som tar emot besökare, leverantörer och servicepersonal. Passar både små och större företag, med en eller flera entréer.
+- **Var det körs:** lokalt på kundens egen utrustning – en färdig enkortsdator från DHEX AB, en egen NAS/Docker-server (t.ex. Synology eller Unraid) eller en Windows-dator. Ingen molntjänst.
+- **Pris:** engångslicens, inga månads- eller användaravgifter. Offert via support@dhexab.com.
+- **Utvecklat i:** Sverige, av DHEX AB (org.nr 559418-9143).
+
+## Det här är Arrivo inte
+
+- **Inte ett ID06-system eller en elektronisk personalliggare** för byggarbetsplatser. Arrivo registrerar besökare, inte byggpersonal enligt skatteförfarandelagen.
+- **Inte ett certifierat brandskyddssystem.** Evakueringslistan är ett komplement till företagets ordinarie brandskydd och rutiner. Reservkraft (UPS) för dator, nätverk och skrivare rekommenderas.
+- **Inte en molntjänst.** Inga besöksuppgifter skickas till DHEX AB eller någon tredje part.
+
+## Varför välja Arrivo
+
+- **Prisvärt över tid:** en engångskostnad i stället för abonnemang. Inga avgifter per besökare, värd, entré eller surfplatta – efter några år blir det betydligt billigare än besökssystem med månadsavgift.
+- **Ni äger systemet:** programvaran körs på er egen utrustning och all data stannar i ert eget nätverk.
+- **Fungerar helt utan internet:** inga molnberoenden, inga externa typsnitt eller skript. Incheckningen fungerar även om internetuppkopplingen är nere.
+- **Enkelt att använda:** allt ställs in från en webbaserad adminsida – ingen teknisk kunskap krävs i vardagen.
+- **Svensk leverantör:** frågor, offert och support går direkt till DHEX AB.
+- **Service ingår:** 12 månaders service och support ingår från köpet.
+
+## Funktioner
+
+### Kiosk vid entrén (surfplatta)
+- Incheckning med förnamn, efternamn, företag och vilken värd besökaren ska träffa.
+- Gruppincheckning – upp till 20 personer på en gång, med en gemensam notis till värden.
+- Utcheckning från en lista över incheckade, med möjlighet att checka ut hela gruppen.
+- Flera entréer med var sin kioskadress (t.ex. huvudentré och lager), eller en gemensam.
+- Går automatiskt tillbaka till startsidan och standardspråket efter inaktivitet.
+- Byggd för surfplattor i kioskläge: tål att kioskappen rensar kakor och att servern startas om mitt i en incheckning.
+- Kiosken visar aldrig mer än namn och företag för de som är incheckade.
+- Fungerar på allt från mobilskärmar till stora pekskärmar.
+
+### Värdnotiser
+- E-post och Microsoft Teams till värden när besökaren checkar in. Ställs in per värd.
+- Webhook för koppling till egna system.
+- Notiserna köas och skickas igen automatiskt om något tillfälligt fallerar.
+
+### Översikt och historik
+- Vilka som är på plats just nu och dagens besök.
+- Sökbar historik med filter. Export och import i Excel och CSV.
+- Automatisk utcheckning vid valfritt klockslag, t.ex. för besökare som glömt att checka ut.
+- Konton för administratörer och konton med läsbehörighet (t.ex. receptionen).
+
+### Evakuering
+- En knapp i adminsidan tar fram en lista över alla som är på plats – med företag, ansvarig värd, entré, incheckningstid och kolumn för avprickning.
+- Listan skrivs ut direkt på en nätverksskrivare (AirPrint/IPP – inga drivrutiner eller skrivarserver behövs), visas på skärmen och kan öppnas som PDF.
+- Kan även utlösas från ett annat system via Arrivos API.
+
+### Utseende och innehåll
+- Egen logga, färger (med kontroll av läsbarhet), bakgrund, typsnitt och knappar.
+- Startsidan byggs av moduler: rubrik, text, bild, banner, klocka, språkflaggor och gäst-Wi-Fi med QR-kod som ansluter telefonen direkt.
+- Förhandsvisning i olika skärmstorlekar, publicering med sparade versioner och möjlighet att gå tillbaka.
+- Säsonger: schemalägg innehåll och teman per datum, veckodag eller klockslag, med färdiga mallar för jul, nyår, påsk, midsommar och sommar. Surfplattorna uppdateras själva.
+
+### Språk
+- Valfritt antal språk i kiosken, med flaggor och egen översättningstabell. Stöd för språk som skrivs från höger till vänster (t.ex. arabiska).
+- Svenska och engelska ingår från början. Språk kan exporteras och importeras.
+- Adminsidan finns på svenska och engelska.
+
+### Integrationer
+- REST-API med API-nycklar: vilka som är incheckade, besökshistorik och utlösning av evakueringslistan.
+
+## Data, säkerhet och GDPR
+
+- All data lagras lokalt hos kunden. Inga utgående anrop görs förutom de integrationer som kunden själv ställer in (t.ex. e-post och Teams).
+- GDPR: automatisk gallring av gamla besök. Standard är anonymisering efter 90 dagar (namnet tas bort, statistik behålls); lagringstid och radering ställs in av kunden. Integritetstext visas vid incheckning.
+- Lösenord lagras hashade (Argon2) och hemligheter som e-postlösenord krypteras.
+- Besökares namn och företag skrivs aldrig till systemets loggfiler.
+- Inbyggd backup och återställning.
+
+## Köp och leverans
+
+Arrivo köps med en engångslicens och finns i två varianter:
+
+1. **Färdig enhet:** en enkortsdator (Raspberry Pi) med Arrivo förinstallerat. Ansluts till nätverket och är klar att ställa in från webbläsaren.
+2. **Endast programvara:** kunden kör Arrivo på egen utrustning, t.ex. en Synology- eller Unraid-NAS med Docker, en Linux-server eller en Windows-dator.
+
+I båda fallen ingår 12 månaders service och support. Nya versioner (uppgraderingar) köps separat när kunden vill. Priser och villkor: kontakta DHEX AB.
+
+### Det som behövs
+- En surfplatta eller pekskärm med webbläsare vid varje entré (Android, iPad eller annan). För Android rekommenderas kioskappen Dhex Lock från DHEX AB.
+- Ett lokalt nätverk. Internet behövs inte. Värdnotiser via e-post eller Teams kräver förbindelse till e-postservern respektive Microsoft Teams.
+- Valfritt: en nätverksskrivare för evakueringslistan.
+
+Arrivo nås i nätverket på en enkel adress (http://arrivo.local:8420) och har en installationsguide första gången den startas.
+
+## Länkar
+
+- [Arrivo – produktsida (svenska)](https://dhexab.com/arrivo/sv/): funktioner, så fungerar det och vanliga frågor
+- [Arrivo – product page (English)](https://dhexab.com/arrivo/): samma innehåll på engelska
+- [Dhex Lock](https://dhexab.com/#dhex-lock): kioskapp för Android som låser surfplattan till Arrivos incheckning
+- [DHEX AB](https://dhexab.com/): företaget bakom Arrivo
+
+## Kontakt
+
+- DHEX AB, Sverige, org.nr 559418-9143
+- E-post: support@dhexab.com (offert, frågor och support)
+
+---
+
+## English summary
+
+Arrivo is a Swedish visitor management system (visitor check-in, reception and entrance system) for businesses, developed by DHEX AB. Visitors check in and out on a tablet at the entrance, hosts are notified by email or Microsoft Teams when their guest arrives, and the business always knows who is on site – including a printable evacuation list.
+
+- **Self-hosted and fully offline:** runs on the customer's own equipment in the local network – a ready-to-use single-board computer (Raspberry Pi) from DHEX AB, a NAS or Docker server (e.g. Synology, Unraid), or a Windows computer. No cloud service, no internet connection required. All data stays on site.
+- **One-time license:** the customer owns and runs the system. No monthly fees and no per-visitor, per-host, per-entrance or per-tablet fees. 12 months of service and support included. Upgrades to new versions are optional and purchased separately. Pricing on request.
+- **Who it is for:** manufacturing, warehouses, offices and other businesses receiving visitors, suppliers and contractors.
+- **Features:** tablet kiosk with group check-in (up to 20 people) and check-out list; multiple entrances; host notifications (email, Microsoft Teams, webhook); live overview and searchable history with Excel/CSV export; automatic check-out at a set time; one-click evacuation list printed directly to a network printer (AirPrint/IPP, no drivers); custom branding, modular start page with guest Wi-Fi QR code, scheduled seasonal themes; unlimited kiosk languages including right-to-left; REST API; GDPR retention with automatic anonymisation; built-in backup.
+- **What it is not:** not an ID06 system or electronic staff register for construction sites, not a certified fire safety system (the evacuation list complements existing procedures), and not a cloud service.
+- **Contact:** DHEX AB, Sweden (org. no. 559418-9143), support@dhexab.com – [product page](https://dhexab.com/arrivo/)
