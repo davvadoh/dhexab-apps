@@ -18,6 +18,7 @@
         <a href="../">Dhex Lock</a>
         <a href="./" aria-current="page">API</a>
         <a href="../privacy/">Privacy</a>
+        <a href="../terms/">Terms</a>
       </nav>
     </div>
     <div class="hero">
@@ -128,7 +129,7 @@ curl -H "Authorization: Bearer $KEY" -X PUT --data-binary @config.json $HOST/api
     </ul>
 
     <h2>Motion detection</h2>
-    <p>Turned on in the same menu. The camera compares pictures about four times per second. When it detects motion, the screensaver is woken and the inactivity timers are reset, and the screen is turned on if <em>Turn the screen on at motion</em> is on and the screen schedule allows it. Pictures are analysed on the device and are never saved or sent. A picture only leaves the device through <code>/api/camera/photo</code>.</p>
+    <p>Turned on under <strong>Screensaver and motion</strong> in the admin menu. There you also find <em>Test motion detection</em>, which shows live when the camera detects motion and works without kiosk mode. The first time, the app asks for permission to use the camera (as Device Owner it is granted automatically). The camera compares pictures about four times per second. When it detects motion, the screensaver is woken and the inactivity timers are reset, and the screen is turned on if <em>Turn the screen on at motion</em> is on and the screen schedule allows it. Pictures are analysed on the device and are never saved or sent. A picture only leaves the device through <code>/api/camera/photo</code>.</p>
   </section>
 
   <section class="card" id="svenska" lang="sv">
@@ -185,7 +186,7 @@ X-Api-Key: &lt;nyckel&gt;
     </ul>
 
     <h2>Rörelsedetektering</h2>
-    <p>Slås på under samma meny. Kameran jämför bilder ungefär fyra gånger per sekund. Vid rörelse väcks skärmsläckaren och inaktivitetstiderna nollställs, och skärmen tänds om <em>Tänd skärmen vid rörelse</em> är på och skärmschemat tillåter det. Bilderna analyseras på enheten och sparas eller skickas aldrig. En bild lämnar enheten bara genom <code>/api/camera/photo</code>.</p>
+    <p>Slås på under <strong>Skärmsläckare och rörelse</strong> i admin-menyn. Där finns också <em>Testa rörelsedetekteringen</em>, som visar direkt när kameran upptäcker rörelse och fungerar utan kioskläge. Första gången frågar appen om lov att använda kameran (som Device Owner beviljas det automatiskt). Kameran jämför bilder ungefär fyra gånger per sekund. Vid rörelse väcks skärmsläckaren och inaktivitetstiderna nollställs, och skärmen tänds om <em>Tänd skärmen vid rörelse</em> är på och skärmschemat tillåter det. Bilderna analyseras på enheten och sparas eller skickas aldrig. En bild lämnar enheten bara genom <code>/api/camera/photo</code>.</p>
   </section>
 </main>
 
