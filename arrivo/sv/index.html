@@ -272,6 +272,11 @@
     /* Bibehåll ljus text i mörka sektioner. */
     section.dark .sectiontop > p.copy { color:#EEF2EE; font-weight:500; opacity:1; }
     .copy-high-contrast{color:#12352B;font-weight:600}
+
+/* Genuine Arrivo brand beside the introductory text (replaces removed hero mockup). */
+.hero-product-brand{display:inline-flex;align-items:center;justify-content:flex-start;background:#EEF2EE;border-radius:19px;padding:14px 22px;margin-bottom:26px;max-width:100%;box-shadow:0 12px 28px rgba(0,0,0,.10)}
+.hero-product-brand img{width:min(330px,62vw);height:auto;display:block}
+@media(max-width:600px){.hero-product-brand{padding:11px 17px;margin-bottom:20px;border-radius:15px}.hero-product-brand img{width:min(245px,66vw)}}
 </style>
 </head>
 <body>
@@ -291,6 +296,7 @@
 </nav>
 <div class="hero">
 <div>
+<div class="hero-product-brand"><img src="assets/arrivo-logo.png" alt="Arrivo – Visitor Management" width="330" height="123"></div>
 <span class="eyebrow">Besökssystem från DHEX AB · Byggt i Sverige</span>
 <h1>Ett komplett <em>besökssystem</em>. Utan moln och månadsavgifter.</h1>
 <p class="lead">Arrivo är ett svenskt besökssystem för företag som vill hantera incheckning, utcheckning, värdnotifieringar, historik och utrymningslistor på ett enkelt sätt. Systemet körs lokalt i ert eget nätverk och kärnfunktionerna fungerar utan internet.</p>
