@@ -275,6 +275,16 @@
 .hero-product-brand{display:inline-flex;align-items:center;justify-content:flex-start;background:#EEF2EE;border-radius:19px;padding:14px 22px;margin-bottom:26px;max-width:100%;box-shadow:0 12px 28px rgba(0,0,0,.10)}
 .hero-product-brand img{width:min(330px,62vw);height:auto;display:block}
 @media(max-width:600px){.hero-product-brand{padding:11px 17px;margin-bottom:20px;border-radius:15px}.hero-product-brand img{width:min(245px,66vw)}}
+
+/* Version 10: produktlogotyp till höger om introduktionstexten */
+.hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:center;gap:48px;max-width:none;padding:76px 0 92px}
+.hero>div:first-child{min-width:0}
+.hero h1{font-size:clamp(43px,5vw,72px);line-height:1.04;max-width:100%}
+.hero .lead{max-width:640px}
+.hero-product-brand{display:flex;align-items:center;justify-content:center;align-self:center;background:#E3EAE4;border-radius:28px;min-height:310px;padding:44px 30px;margin:0;box-shadow:none}
+.hero-product-brand img{width:100%;max-width:470px;height:auto;display:block}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:28px;padding:60px 0 72px}.hero h1{font-size:clamp(42px,7vw,70px)}.hero-product-brand{min-height:220px;padding:28px}.hero-product-brand img{max-width:380px}}
+@media(max-width:530px){.hero{gap:24px;padding:48px 0 62px}.hero h1{font-size:clamp(42px,10vw,56px)}.hero-product-brand{border-radius:20px;min-height:180px;padding:22px}.hero-product-brand img{max-width:290px}}
 </style>
 </head>
 <body>
@@ -294,7 +304,6 @@
 </nav>
 <div class="hero">
 <div>
-<div class="hero-product-brand"><img alt="Arrivo – Visitor Management" height="123" src="assets/arrivo-logo.png" width="330"/></div>
 <span class="eyebrow">Visitor management by DHEX AB · Developed in Sweden</span>
 <h1>A complete <em>visitor management system</em>. Without cloud dependency or monthly fees.</h1>
 <p class="lead">Arrivo is a Swedish visitor management system that helps businesses manage check-in, check-out, host notifications, visit history and evacuation lists. It runs on your own local network, and its core functions work without an internet connection.</p>
@@ -303,6 +312,7 @@
 <a class="btn" href="#funktioner">Explore features ↓</a>
 </div>
 </div>
+<div class="hero-product-brand"><img alt="Arrivo – Visitor Management" height="123" src="assets/arrivo-logo.png" width="330"/></div>
 </div>
 <div class="trust">
 <div><strong>For businesses</strong> Manufacturing, warehouses, offices and reception desks</div>
