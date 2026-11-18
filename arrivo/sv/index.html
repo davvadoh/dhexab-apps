@@ -277,6 +277,16 @@
 .hero-product-brand{display:inline-flex;align-items:center;justify-content:flex-start;background:#EEF2EE;border-radius:19px;padding:14px 22px;margin-bottom:26px;max-width:100%;box-shadow:0 12px 28px rgba(0,0,0,.10)}
 .hero-product-brand img{width:min(330px,62vw);height:auto;display:block}
 @media(max-width:600px){.hero-product-brand{padding:11px 17px;margin-bottom:20px;border-radius:15px}.hero-product-brand img{width:min(245px,66vw)}}
+
+/* Version 10: produktlogotyp till höger om introduktionstexten */
+.hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);align-items:center;gap:48px;max-width:none;padding:76px 0 92px}
+.hero>div:first-child{min-width:0}
+.hero h1{font-size:clamp(43px,5vw,72px);line-height:1.04;max-width:100%}
+.hero .lead{max-width:640px}
+.hero-product-brand{display:flex;align-items:center;justify-content:center;align-self:center;background:#E3EAE4;border-radius:28px;min-height:310px;padding:44px 30px;margin:0;box-shadow:none}
+.hero-product-brand img{width:100%;max-width:470px;height:auto;display:block}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:28px;padding:60px 0 72px}.hero h1{font-size:clamp(42px,7vw,70px)}.hero-product-brand{min-height:220px;padding:28px}.hero-product-brand img{max-width:380px}}
+@media(max-width:530px){.hero{gap:24px;padding:48px 0 62px}.hero h1{font-size:clamp(42px,10vw,56px)}.hero-product-brand{border-radius:20px;min-height:180px;padding:22px}.hero-product-brand img{max-width:290px}}
 </style>
 </head>
 <body>
@@ -296,7 +306,6 @@
 </nav>
 <div class="hero">
 <div>
-<div class="hero-product-brand"><img src="assets/arrivo-logo.png" alt="Arrivo – Visitor Management" width="330" height="123"></div>
 <span class="eyebrow">Besökssystem från DHEX AB · Byggt i Sverige</span>
 <h1>Ett komplett <em>besökssystem</em>. Utan moln och månadsavgifter.</h1>
 <p class="lead">Arrivo är ett svenskt besökssystem för företag som vill hantera incheckning, utcheckning, värdnotifieringar, historik och utrymningslistor på ett enkelt sätt. Systemet körs lokalt i ert eget nätverk och kärnfunktionerna fungerar utan internet.</p>
@@ -305,6 +314,7 @@
 <a class="btn" href="#funktioner">Utforska funktioner ↓</a>
 </div>
 </div>
+<div class="hero-product-brand"><img src="assets/arrivo-logo.png" alt="Arrivo – Visitor Management" width="330" height="123"></div>
 </div>
 <div class="trust">
 <div><strong>För företag</strong> Industri, lager, kontor och receptioner</div>
